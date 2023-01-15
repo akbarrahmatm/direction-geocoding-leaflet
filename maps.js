@@ -16,10 +16,8 @@ L.Routing.control({
 function onLocationFound(e) {
     var radius = e.accuracy;
 
-    L.marker(e.latlng).addTo(map)
-        .bindPopup("You are within " + radius + " meters from this point").openPopup();
 
-    L.circle(e.latlng, radius).addTo(map);
+    L.circle(e.latlng, radius).addTo(map).bindPopup("You are within " + radius + " meters from this point").openPopup();
 }
 
 map.on('locationfound', onLocationFound);
