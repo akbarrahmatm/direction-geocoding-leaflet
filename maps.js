@@ -1,5 +1,6 @@
 var map = L.map('map').setView([-6.200000, 106.816666], 12);
 
+
 map.locate({setView: true, maxZoom: 16});
 
 L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',{
